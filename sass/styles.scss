@@ -60,15 +60,15 @@ main {
 }
 
 .select {
-    border-radius: 0.625rem;
-    border: 1px solid $primary-color;
-    background: $bg-color;
-    padding:  0.94rem;
+    padding: 0.94rem;
     padding-left: 4.065rem;
     margin-top: 0.62rem;
+    border-radius: 0.625rem;
+    border: 1px solid $primary-color;
     font-size: 1.125rem;
-    position: relative;
     overflow: hidden;
+    position: relative;
+    background: $bg-color;
     @include flexCenter(space-between);
     cursor: pointer;
     transition: 0.3s;
@@ -80,8 +80,7 @@ main {
 }
 
 .icon-style {
-    width: 3.125rem;
-    height: 100%;
+    padding: 0.96rem;
     top: 0;
     left: 0;
     background: $primary-color;
@@ -105,8 +104,45 @@ main {
     transition: 0.2s;
 }
 
+.menu {
+    width: 100%;
+    padding: 0.625rem;
+    top: 6rem;
+    border: 1px solid $primary-color;
+    border-radius: 0.625rem;
+    list-style: none;
+    font-size: 1.125rem;
+    color: $primary-color;
+    background: $bg-color;
+    position: absolute;
+    opacity: 0;
+    display: none;
+}
+
+.menu li {
+    padding: 0.85rem;
+    margin: 0.313rem;
+    border-radius: 0.313rem;
+    transition: 0.3s;
+}
+
+.menu li:hover {
+    color: $bg-color;
+    background: $primary-color;
+}
+
+.menu-active {
+    display: block;
+    opacity: 1;
+}
+
+.input-form{
+    width: 100%;
+}
+
 .user {
     display: flex;
+    margin-top: 1.44rem;
 }
 .checkbox {
     display: flex;
