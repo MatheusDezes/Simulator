@@ -1,0 +1,113 @@
+@import 'variables';
+@import 'mixin';
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IM Fell French Canon SC", serif;
+}
+   
+main {
+    width: 100%;
+    height: 100vh;
+    background: $bg-color;
+    @include flexCenter(center);
+}
+
+.container {
+    width: 59.5625rem;
+    height: 33.75rem;
+    padding: 3rem;
+    padding-right: calc(50% + 3rem);
+    border-radius: 1.25rem;
+    border: 1px solid $primary-color;
+    overflow: hidden;
+    position: relative;
+    color: $primary-color;
+    background: $bg-color;
+}
+
+.result-container {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: $primary-gradient;
+    border-radius: 0rem 0rem 0rem 3.75rem;
+    position: absolute;
+}
+
+.title-form {
+    color: $primary-color;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 400;
+    margin-bottom: 1.20rem;
+}
+
+.dropdown{
+    width: 100%;
+    position: relative;
+}
+
+.dropdown *{
+    box-sizing: border-box;
+}
+
+.dropdown label {
+    color: $primary-color;
+    font-size: 1.125rem;
+}
+
+.select {
+    border-radius: 0.625rem;
+    border: 1px solid $primary-color;
+    background: $bg-color;
+    padding:  0.94rem;
+    padding-left: 4.065rem;
+    margin-top: 0.62rem;
+    font-size: 1.125rem;
+    position: relative;
+    overflow: hidden;
+    @include flexCenter(space-between);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.select:hover{
+    border: 1px solid $primary-colorHover;
+    background: $bg-colorHover;
+}
+
+.icon-style {
+    width: 3.125rem;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $primary-color;
+    position: absolute;
+    transition: 0.3s;
+}
+.select:hover .icon-style{
+    background: $primary-colorHover;
+}
+
+.icon-style i {
+    width: 100%;
+    height: 100%;
+    font-size: 1.40rem;
+    color: $bg-color;
+    @include flexCenter(center);
+}
+
+.icon-drop i {
+    font-size: 1.125rem;
+    transition: 0.2s;
+}
+
+.user {
+    display: flex;
+}
+.checkbox {
+    display: flex;
+}
