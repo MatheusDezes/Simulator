@@ -87,6 +87,7 @@ main {
     position: absolute;
     transition: 0.3s;
 }
+
 .select:hover .icon-style{
     background: $primary-colorHover;
 }
@@ -131,19 +132,61 @@ main {
     background: $primary-color;
 }
 
-.menu-active {
+.menu-open {
     display: block;
     opacity: 1;
 }
 
-.input-form{
-    width: 100%;
+.input-form label {
+    color: $primary-color;
+    font-size: 1.125rem;
+}
+
+.input-form:nth-child(even){
+    margin-left: 1rem;
 }
 
 .user {
     display: flex;
     margin-top: 1.44rem;
 }
+
+.user input {
+    width: 100%;
+    padding: 0.94rem;
+    border-radius: 0.625rem;
+    border: 1px solid $primary-color;
+    font-size: 1.125rem;
+    background: $bg-color;
+    color: $primary-color;
+    outline: none;
+    margin-top: 0.62rem;
+    transition: 0.3s;
+}
+
+.user input::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+.user input:hover{
+    border: 1px solid $primary-colorHover;
+    background: $bg-colorHover;
+}
+
+.title-type {
+    margin: 1.20rem 0;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 400;
+}
+
+
 .checkbox {
     display: flex;
 }
+
+.input-form2 {
+    width: 100%;
+    background: $bg-color;
+    border: 1px solid $primary-color;
+}
+
