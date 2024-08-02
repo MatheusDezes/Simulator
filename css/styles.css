@@ -23,7 +23,6 @@ main {
   border: 1px solid #E4C9A0;
   overflow: hidden;
   position: relative;
-  color: #E4C9A0;
   background: #070102;
 }
 
@@ -75,6 +74,10 @@ main {
   transition: 0.3s;
 }
 
+.selected {
+  color: #E4C9A0;
+}
+
 .select:hover {
   border: 1px solid #c09452;
   background: #0e0204;
@@ -106,6 +109,7 @@ main {
 .icon-drop i {
   font-size: 1.125rem;
   transition: 0.2s;
+  color: #E4C9A0;
 }
 
 .menu {
@@ -145,8 +149,8 @@ main {
   font-size: 1.125rem;
 }
 
-.input-form:nth-child(even) {
-  margin-left: 1rem;
+.input-form:first-child {
+  margin-right: 1rem;
 }
 
 .user {
@@ -180,16 +184,54 @@ main {
   margin: 1.2rem 0;
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 400;
+  color: #E4C9A0;
 }
 
 .checkbox {
   display: flex;
+  color: #E4C9A0;
 }
 
 .input-form2 {
   width: 100%;
+  padding: 0.94rem;
   background: #070102;
+  border-radius: 0.625rem;
   border: 1px solid #E4C9A0;
+  font-size: 1.125rem;
+  transition: 0.3s;
+  position: relative;
+}
+
+.check-wapper input[type=checkbox] {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  appearance: none;
+  border-radius: 0.1875rem;
+  background: #070102;
+}
+
+.input-form2:hover {
+  border: 1px solid #c09452;
+  background: #0e0204;
+}
+
+.input-form2:first-child {
+  margin-right: 1rem;
+}
+
+.btn-simular {
+  width: 15.9375rem;
+  padding: 0.5625rem 1.313rem;
+  font-size: 1.5rem;
+  border-radius: 1.25rem;
+  border: none;
+  margin-top: 1.2rem;
+  background: linear-gradient(to right, #F1C37C, #A78045);
+}
+
+.btn-simular:hover {
+  background: linear-gradient(to right, #ffc875, #c98929);
 }
 
 /*# sourceMappingURL=styles.css.map */

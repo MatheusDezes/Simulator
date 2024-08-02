@@ -24,7 +24,6 @@ main {
     border: 1px solid $primary-color;
     overflow: hidden;
     position: relative;
-    color: $primary-color;
     background: $bg-color;
 }
 
@@ -74,6 +73,10 @@ main {
     transition: 0.3s;
 }
 
+.selected {
+    color: $primary-color;
+}
+
 .select:hover{
     border: 1px solid $primary-colorHover;
     background: $bg-colorHover;
@@ -103,6 +106,7 @@ main {
 .icon-drop i {
     font-size: 1.125rem;
     transition: 0.2s;
+    color: $primary-color;
 }
 
 .menu {
@@ -142,8 +146,8 @@ main {
     font-size: 1.125rem;
 }
 
-.input-form:nth-child(even){
-    margin-left: 1rem;
+.input-form:first-child {
+    margin-right: 1rem;
 }
 
 .user {
@@ -177,16 +181,53 @@ main {
     margin: 1.20rem 0;
     font-size: clamp(1.25rem, 2vw, 1.5rem);
     font-weight: 400;
+    color: $primary-color;
 }
-
 
 .checkbox {
     display: flex;
+    color: $primary-color;
 }
+
 
 .input-form2 {
     width: 100%;
+    padding: 0.94rem;
     background: $bg-color;
+    border-radius: 0.625rem;
     border: 1px solid $primary-color;
+    font-size: 1.125rem;
+    transition: 0.3s;
+    position: relative;
 }
 
+.check-wapper input[type="checkbox"] {
+    width: 1.0625rem;
+    height: 1.0625rem;
+    appearance: none;
+    border-radius: 0.1875rem;
+    background: #070102;
+}
+
+.input-form2:hover{
+    border: 1px solid $primary-colorHover;
+    background: $bg-colorHover;
+}
+
+.input-form2:first-child {
+    margin-right: 1rem;
+}
+
+.btn-simular {
+    width: 15.9375rem;
+    padding: 0.5625rem 1.313rem;
+    font-size: 1.5rem;
+    border-radius: 1.25rem;
+    border: none;
+    margin-top: 1.20rem;
+    background: $secondary-gradient;
+}
+
+.btn-simular:hover{
+    background: $gradientHover;
+}

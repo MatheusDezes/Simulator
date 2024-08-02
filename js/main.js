@@ -1,6 +1,3 @@
-import file from './phonemask';
-
-
 const dropDowns = document.querySelectorAll('.dropdown');
 
 dropDowns.forEach(dropDowns => {
