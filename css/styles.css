@@ -14,7 +14,7 @@ main {
   align-items: center;
 }
 
-.container {
+.form-container {
   width: 59.5625rem;
   height: 33.75rem;
   padding: 3rem;
@@ -24,16 +24,6 @@ main {
   overflow: hidden;
   position: relative;
   background: #070102;
-}
-
-.result-container {
-  width: 50%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background: linear-gradient(#F1C37C, #A78045);
-  border-radius: 0rem 0rem 0rem 3.75rem;
-  position: absolute;
 }
 
 .title-form {
@@ -232,6 +222,88 @@ main {
 
 .btn-simular:hover {
   background: linear-gradient(to right, #ffc875, #c98929);
+}
+
+.result {
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(#F1C37C, #A78045);
+  border-radius: 0rem 0rem 0rem 3.75rem;
+  position: absolute;
+}
+
+.result-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.title-result {
+  color: #070102;
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+.simulation-result {
+  width: 10rem;
+  margin: 2.31rem 0 4rem 0;
+}
+
+.simulation-result h1 {
+  font-weight: 400;
+  font-size: clamp(3rem, 6vw, 3.5rem);
+  color: #070102;
+}
+
+.simulation-result span {
+  font-family: "Alike", serif;
+  font-weight: 400;
+  color: #070102;
+}
+
+.atencion h4 {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  color: #070102;
+}
+
+.atencion p {
+  width: 22.125rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: #070102;
+  position: relative;
+}
+
+.atencion p::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: inline-block;
+  background: #070102;
+  position: relative;
+  top: -5px;
+}
+
+.btn-whatsapp {
+  width: 15.9375rem;
+  padding: 0.5625rem 1.313rem;
+  font-size: 1.5rem;
+  border-radius: 1.25rem;
+  border: none;
+  background: #070102;
+  color: #E4C9A0;
+}
+
+.btn-whatsapp :hover {
+  background: #0e0204;
 }
 
 /*# sourceMappingURL=styles.css.map */

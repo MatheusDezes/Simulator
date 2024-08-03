@@ -7,13 +7,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=IM+Fell+French+Canon:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alike&display=swap" rel="stylesheet">
+
     <title>Simulator</title>
 </head>
 <body>
     <!-------main-------->
     <main>
         <form>
-            <div class="container">
+            <div class="form-container">
                 <h1 class="title-form">Simualação Tattoo</h1>
                 <div class="dropdown">
                     <label for="dropdown">Escolha seu estilo</label>
@@ -54,10 +56,23 @@
                     <i class="fa-solid fa-calculator"></i>
                     Simular Tattoo
                 </button>
-                <div class="result-container">
-                    <h1></h1>
-                </div><!--result-container-->
-            </div><!--container-->
+                <div class="result">
+                    <div class="result-container">
+                        <h1 class="title-result">Simulação</h1>
+                        <div class="simulation-result">
+                            <h1>R$<span id="valorSimulation">0</span> a R$<span id="valorSimulation">0</span></h1>
+                        </div>
+                        <article class="atencion">
+                            <h4>Realizar orçamento via WhatsApp</h4>
+                            <p>Lembrando  que é um valor estimado recomendamos que faça o orçamento via WhatsApp.</p>
+                        </article>
+                        <button type="submit" class="btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            Orçamentos
+                        </button>
+                    </div><!--result-container-->
+                </div><!--result-->
+            </div><!--form-container-->
         </form>
     </main>
     <!-------main-------->
