@@ -94,6 +94,10 @@ main {
     @include flexCenter(center);
 }
 
+.icon-style-clicked{
+    background: $primary-colorHover;
+}
+
 .icon-drop {
     transition: 0.3s;
 }
@@ -138,6 +142,11 @@ main {
 .menu li:hover {
     color: $bg-color;
     background: $primary-color;
+}
+
+.input-form input {
+    font-family: "IM Fell French Canon", serif;
+
 }
 
 .input-form label {
@@ -227,7 +236,9 @@ input[type=checkbox]:checked:after {
     position: absolute;
     border-radius: 0.1875rem;
     background: $primary-color;
+    transition: 0.3s;
 }
+
 
 .input-form2:hover{
     border: 1px solid $primary-colorHover;

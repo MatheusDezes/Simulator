@@ -97,6 +97,10 @@ main {
   align-items: center;
 }
 
+.icon-style-clicked {
+  background: #c09452;
+}
+
 .icon-drop {
   transition: 0.3s;
 }
@@ -141,6 +145,10 @@ main {
 .menu li:hover {
   color: #070102;
   background: #E4C9A0;
+}
+
+.input-form input {
+  font-family: "IM Fell French Canon", serif;
 }
 
 .input-form label {
@@ -230,6 +238,7 @@ input[type=checkbox]:checked:after {
   position: absolute;
   border-radius: 0.1875rem;
   background: #E4C9A0;
+  transition: 0.3s;
 }
 
 .input-form2:hover {
