@@ -110,8 +110,9 @@ main {
     color: $primary-color;
     background: $bg-color;
     position: absolute;
-    opacity: 0;
+    z-index: 1;
     display: none;
+    opacity: 0;
 }
 
 .menu li {
@@ -179,10 +180,9 @@ main {
     color: $primary-color;
 }
 
-
 .input-form2 {
     width: 100%;
-    padding: 0.94rem;
+    padding: 0.94rem 1.563rem;
     background: $bg-color;
     border-radius: 0.625rem;
     border: 1px solid $primary-color;
@@ -191,12 +191,34 @@ main {
     position: relative;
 }
 
-.check-wapper input[type="checkbox"] {
+input[type=checkbox] {
+    position: relative;
+    top: -2px;
+    left: -8px;
+    cursor: pointer;
+}
+  
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
     width: 1.0625rem;
     height: 1.0625rem;
-    appearance: none;
+    top: 0;
+    left: 0;
     border-radius: 0.1875rem;
-    background: #070102;
+    border: 1px solid $primary-color;
+    background: $bg-color;
+}
+  
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 1.188rem;
+    height: 1.188rem;
+    position: absolute;
+    border-radius: 0.1875rem;
+    background: $primary-color;
 }
 
 .input-form2:hover{
@@ -216,6 +238,7 @@ main {
     border: none;
     margin-top: 1.20rem;
     background: $secondary-gradient;
+    transition: 0.3s;
 }
 
 .btn-simular:hover{
@@ -249,7 +272,7 @@ main {
 
 .simulation-result {
     width: 10rem;
-    margin: 2.31rem 0 4rem 0;
+    margin: 2.75rem 0 3.56rem 0;
 }
 
 .simulation-result h1 {
@@ -265,9 +288,9 @@ main {
 }
 
 .atencion h4 {
-    text-align: center;
     font-size: 1.25rem;
     font-weight: 400;
+    text-align: center;
     margin-bottom: 0.25rem;   
     color: $bg-color;
 }
@@ -276,14 +299,16 @@ main {
     width: 22.125rem;
     text-align: center;
     font-size: 0.9375rem;
+    font-family: "IM FELL French Canon";
     color: $bg-color;
     position: relative;
 }
 
 .atencion p::after {
     content: "";
-    width: 100%;
+    width: 90%;
     height: 1px;
+    text-align: center;
     display: inline-block;
     background: $bg-color;
     position: relative;
@@ -298,9 +323,11 @@ main {
     border: none;
     background: $bg-color;
     color: $primary-color;
+    transition: 0.3s;
 }
 
-.btn-whatsapp :hover{
+.btn-whatsapp:hover{
+    color: $primary-colorHover;
     background: $bg-colorHover;
 }
 
