@@ -54,6 +54,7 @@ main {
     margin-top: 0.62rem;
     border-radius: 0.625rem;
     border: 1px solid $primary-color;
+    color: $primary-color;
     font-size: 1.125rem;
     overflow: hidden;
     position: relative;
@@ -63,8 +64,8 @@ main {
     transition: 0.3s;
 }
 
-.selected {
-    color: $primary-color;
+.select-clicked {
+    border: 1px solid $primary-colorHover;
 }
 
 .select:hover{
@@ -93,10 +94,17 @@ main {
     @include flexCenter(center);
 }
 
+.icon-drop {
+    transition: 0.3s;
+}
+
 .icon-drop i {
     font-size: 1.125rem;
-    transition: 0.2s;
     color: $primary-color;
+}
+
+.icon-drop-rotate{
+    transform: rotate(180deg);
 }
 
 .menu {
@@ -115,6 +123,11 @@ main {
     opacity: 0;
 }
 
+.menu-open {    
+    display: block;
+    opacity: 1;
+}
+
 .menu li {
     padding: 0.85rem;
     margin: 0.313rem;
@@ -125,11 +138,6 @@ main {
 .menu li:hover {
     color: $bg-color;
     background: $primary-color;
-}
-
-.menu-open {
-    display: block;
-    opacity: 1;
 }
 
 .input-form label {

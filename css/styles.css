@@ -53,6 +53,7 @@ main {
   margin-top: 0.62rem;
   border-radius: 0.625rem;
   border: 1px solid #E4C9A0;
+  color: #E4C9A0;
   font-size: 1.125rem;
   overflow: hidden;
   position: relative;
@@ -64,8 +65,8 @@ main {
   transition: 0.3s;
 }
 
-.selected {
-  color: #E4C9A0;
+.select-clicked {
+  border: 1px solid #c09452;
 }
 
 .select:hover {
@@ -96,10 +97,17 @@ main {
   align-items: center;
 }
 
+.icon-drop {
+  transition: 0.3s;
+}
+
 .icon-drop i {
   font-size: 1.125rem;
-  transition: 0.2s;
   color: #E4C9A0;
+}
+
+.icon-drop-rotate {
+  transform: rotate(180deg);
 }
 
 .menu {
@@ -118,6 +126,11 @@ main {
   opacity: 0;
 }
 
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+
 .menu li {
   padding: 0.85rem;
   margin: 0.313rem;
@@ -128,11 +141,6 @@ main {
 .menu li:hover {
   color: #070102;
   background: #E4C9A0;
-}
-
-.menu-open {
-  display: block;
-  opacity: 1;
 }
 
 .input-form label {
