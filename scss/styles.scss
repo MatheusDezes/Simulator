@@ -289,7 +289,7 @@ input[type=checkbox]:checked:after {
 
 .title-result {
     color: $bg-color;
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 400;
 }
 
@@ -315,7 +315,7 @@ input[type=checkbox]:checked:after {
 
 .atencion h4 {
     position: relative;
-    font-size: 1.25rem;
+    font-size: clamp(1.063rem, 2vw, 1.25rem);
     font-weight: 400;
     text-align: center;
     margin-bottom: 0.25rem;   
@@ -436,6 +436,26 @@ input[type=checkbox]:checked:after {
         font-size: 1.188rem;
         border-radius: 0.9375rem;
         margin-top: 0.938rem;
+    }
+
+    .result-container {
+        padding: 1.25rem;
+    }
+
+    .simulation-result {
+        margin: 1rem 0 1.563rem 0;
+    }
+
+    .atencion p {
+        width: 19rem;
+        font-size: 0.813rem;
+    }
+
+    .btn-whatsapp{
+        width: 12.313rem;
+        padding: 0.5625rem 1.313rem;
+        font-size: 1.188rem;
+        border-radius: 0.9375rem;
     }
 }
 
