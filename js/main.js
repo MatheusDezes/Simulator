@@ -15,7 +15,7 @@ dropDowns.forEach(dropDowns => {
         iconStyle.classList.toggle('icon-style-clicked');
         iconDrop.classList.toggle('icon-drop-rotate');
         menu.classList.toggle('menu-open');
-    });
+});
     
     options.forEach(option => {
         option.addEventListener('click', () => {
@@ -57,11 +57,33 @@ maskPhone.addEventListener("input", () => {
         numeroFormatado += ` ${numerosArray.slice(2,7).join("")}`;
     }
 
-     // Acessa o IF quando a quantidade de números é maior do que sete
-     if(numerosArray.length > 7) {
+    // Acessa o IF quando a quantidade de números é maior do que sete
+    if(numerosArray.length > 7) {
         numeroFormatado += `-${numerosArray.slice(7,11).join("")}`;
     }
 
     // Enviar para o campo o número formatado
     maskPhone.value = numeroFormatado;
 });
+
+
+//### Simulador 
+
+
+const button = document.querySelector('.btn-simular');
+const valorSimulation = document.querySelector('#valorSimulation');
+
+
+class blackwork {
+    constructor(flash, fechamento) {
+        this.flash = "R$320 a R$750";
+        this.fechamento = "R$830 a R$1190";
+    }
+}
+
+blackwork = new blackwork();
+
+button.addEventListener('click', () => {
+    valorSimulation.innerText = blackwork.flash;
+});
+
