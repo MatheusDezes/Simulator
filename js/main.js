@@ -66,6 +66,23 @@ maskPhone.addEventListener("input", () => {
     maskPhone.value = numeroFormatado;
 });
 
+// ### Checkbox 
+
+// Seleciona todos os checkboxes com a classe 'check-wapper'
+const checkboxes = document.querySelectorAll('.check-wapper');
+
+// Altera sobre todos os checkboxes para adicionar o ouvinte de eventos
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', function() {
+        // Desmarca todos os checkboxes
+        checkboxes.forEach((cb) => {
+            cb.checked = false;
+        });
+        // Marca apenas o checkbox que foi clicado
+        this.checked = true;
+    });
+});
+
 
 //### Simulador 
 
@@ -74,16 +91,26 @@ const button = document.querySelector('.btn-simular');
 const valorSimulation = document.querySelector('#valorSimulation');
 
 
-class blackwork {
-    constructor(flash, fechamento) {
-        this.flash = "R$320 R$750";
-        this.fechamento = "R$830 R$1190";
+const tattooStyles = {
+    blackwork: {
+        flash: "R$320 R$750",
+        fechamento: "R$830 R$1190"
+    },
+    realismo: {
+        flash: "R$490 R$990",
+        fechamento: "R$990 R$1990"
+    },   
+    oldSchool: {
+        flash: "R$330 R$730",
+        fechamento: "R$850 R$1190"
+    },
+    fineLine: {
+        flash: "R$310 R$750",
+        fechamento: "R$840 R$1190"
     }
-}
-
-blackwork = new blackwork();
+};
 
 button.addEventListener('click', () => {
-    valorSimulation.innerText = blackwork.flash;
+    valorSimulation.innerText = tattooStyles.blackwork.flash;
 });
 
