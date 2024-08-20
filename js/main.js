@@ -62,7 +62,41 @@ dropDowns.forEach(dropDowns => {
             const checkboxFlash = document.getElementById('flashCheck');
             const checkboxFechamento = document.getElementById('fechamentoCheck');
             const nomeInput = document.getElementById('nome');
-                
+
+            // Função para animar dois números simultaneamente
+            function animateNumbers(startValue1, finalValue1, startValue2, finalValue2, element, duration = 2000) {
+                const increment1 = finalValue1 / (duration / 16);
+                const increment2 = finalValue2 / (duration / 16);
+                let currentValue1 = startValue1;
+                let currentValue2 = startValue2;
+                const startTime = performance.now();
+
+                function updateNumbers(currentTime) {
+                    const elapsedTime = currentTime - startTime;
+                    currentValue1 = Math.min(finalValue1, startValue1 + increment1 * elapsedTime / 16);
+                    currentValue2 = Math.min(finalValue2, startValue2 + increment2 * elapsedTime / 16);
+
+                    element.innerText = `R$${Math.floor(currentValue1).toLocaleString()} R$${Math.floor(currentValue2).toLocaleString()}`;
+
+                    if (currentValue1 < finalValue1 || currentValue2 < finalValue2) {
+                        requestAnimationFrame(updateNumbers);
+                    } else {
+                        element.innerText = `R$${finalValue1.toLocaleString()} R$${finalValue2.toLocaleString()}`;
+                    }
+                }
+
+                requestAnimationFrame(updateNumbers);
+
+                // Adiciona uma animação de escala
+                element.classList.add('animate');
+
+                // Remove a animação de escala após 500ms
+                setTimeout(() => {
+                    element.classList.remove('animate');
+                }, 500);
+            }
+
+
                 // Adiciona um evento de clique ao botão "Simular"
                 Button.addEventListener('click', (event) => {
                     // Impede o comportamento padrão do botão (atualizar a página)
@@ -74,20 +108,25 @@ dropDowns.forEach(dropDowns => {
                     return; // Impede que o código continue se o nome não estiver preenchido
                     }
 
-                    let result = ''; // Variável para armazenar o resultado que será exibido
-                    
-                    // Verifica se o checkbox "Flash" está marcado
+                    let result1 = 0;
+                    let result2 = 0;
+                
                     if (checkboxFlash.checked) {
-                        result += style.flash;
-                    }
-                    
-                    // Verifica se o checkbox "Fechamento" está marcado
-                    if (checkboxFechamento.checked) {
-                        result += style.fechamento;
+                        const [flash1, flash2] = style.flash.split(' ').map(v => parseInt(v.replace('R$', '').replace('.', '')));
+                        result1 += flash1;
+                        result2 += flash2;
                     }
                 
-                // Atualiza a interface com o resultado
-                valorSimulation.innerText = result;
+                    if (checkboxFechamento.checked) {
+                        const [fechamento1, fechamento2] = style.fechamento.split(' ').map(v => parseInt(v.replace('R$', '').replace('.', '')));
+                        result1 += fechamento1;
+                        result2 += fechamento2;
+                    }
+                
+                // // Atualiza a interface com o resultado
+                // valorSimulation.innerText = result;
+                 // Anima o número em valorSimulation
+                 animateNumbers(0, result1, 0, result2, valorSimulation);
             
             });
         });

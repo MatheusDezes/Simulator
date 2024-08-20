@@ -319,6 +319,15 @@ input[type=checkbox]:checked:after {
   color: #070102;
 }
 
+.number-animation {
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.animate {
+  transform: scale(1.2);
+}
+
 .atencion h4 {
   position: relative;
   font-size: clamp(1.063rem, 2vw, 1.25rem);
