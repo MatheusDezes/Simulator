@@ -76,8 +76,8 @@ const valorSimulation = document.querySelector('#valorSimulation');
 
 class blackwork {
     constructor(flash, fechamento) {
-        this.flash = "R$320 a R$750";
-        this.fechamento = "R$830 a R$1190";
+        this.flash = "R$320 R$750";
+        this.fechamento = "R$830 R$1190";
     }
 }
 

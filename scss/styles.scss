@@ -299,12 +299,18 @@ input[type=checkbox]:checked:after {
 }
 
 .simulation-result h1 {
-    left: -30px;
     position: relative;
     font-weight: 400;
     font-size: clamp(3rem, 6vw, 3.5rem);
     color: $bg-color;
-    text-wrap: nowrap;
+    position: relative;
+}
+
+.simulation-result h1::after{
+    content: "a";
+    position: absolute;
+    bottom: 1px;
+    left: -32px;
 }
 
 .simulation-result span {
