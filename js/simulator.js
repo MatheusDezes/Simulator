@@ -123,9 +123,7 @@ dropDowns.forEach(dropDowns => {
                         result2 += fechamento2;
                     }
                 
-                // // Atualiza a interface com o resultado
-                // valorSimulation.innerText = result;
-                 // Anima o número em valorSimulation
+                // Atualiza a interface com o resultado
                  animateNumbers(0, result1, 0, result2, valorSimulation);
             
             });
@@ -183,7 +181,3 @@ checkboxes.forEach((checkbox) => {
         this.checked = true;
     });
 });
-
-
-
-
